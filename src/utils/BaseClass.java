@@ -1,47 +1,53 @@
 package utils;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseClass {
 
-	// BaseClass will have the SetUP() and the TearDown() methods
+	public static WebDriver driver;
 
-	public static WebDriver driver; // this variable is being declare as a class level because
-	// we need to initialize from setUp();
-	// and we need to close the variable from tearDown();
-
+	/*
+	 * This method opens the browser and navigates to the url in configs file
+	 */
+	@BeforeMethod(alwaysRun = true)
 	public static void setUp() {
-
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 		String browser = ConfigsReader.getProperty("browser");
 
-		// System.out.println(browser);
-
 		switch (browser.toLowerCase()) {
-		case "chrome":
+		case "chrome": {
 			driver = new ChromeDriver();
 			break;
-		case "firefox":
+		}
+		case "firefox": {
 			driver = new FirefoxDriver();
 			break;
-		case "edge":
+		}
+		case "edge": {
 			driver = new EdgeDriver();
 			break;
-
+		}
 		default:
-			System.out.println("Browser not suported!! ");
 			break;
 		}
 
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT_TIME));
 		String url = ConfigsReader.getProperty("url");
 		driver.get(url);
-
 	}
 
+	/*
+	 * This methods closes the browser
+	 */
+	@AfterMethod(alwaysRun = true)
 	public static void tearDown() {
 		if (driver != null) {
 			driver.quit();

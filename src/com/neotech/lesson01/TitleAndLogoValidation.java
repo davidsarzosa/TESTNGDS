@@ -11,15 +11,15 @@ import utils.ConfigsReader;
 
 public class TitleAndLogoValidation extends CommonMethods {
 
-	@BeforeMethod
-	public void openAndNavigate() {
-		setUp();
-	}
-
-	@AfterMethod
-	public void quitBrowser() {
-		tearDown();
-	}
+//	@BeforeMethod
+//	public void openAndNavigate() {
+//		setUp();
+//	}
+//
+//	@AfterMethod
+//	public void quitBrowser() {
+//		tearDown();
+//	}
 
 	@Test(priority = -1, enabled = false, groups = "smoke")
 	public void titleValidation() {
@@ -36,7 +36,7 @@ public class TitleAndLogoValidation extends CommonMethods {
 		}
 	}
 
-	@Test
+	@Test(groups = "smoke")
 	public void logoValidation() {
 		WebElement logo = driver.findElement(By.xpath("//div[@class='orangehrm-logo']/img"));
 
@@ -47,7 +47,7 @@ public class TitleAndLogoValidation extends CommonMethods {
 		}
 	}
 
-	@Test
+	@Test(groups = "smoke")
 	public void loginValidation() {
 		sendText(driver.findElement(By.id("txtUsername")), ConfigsReader.getProperty("username"));
 		sendText(driver.findElement(By.id("txtPassword")), ConfigsReader.getProperty("password"));
