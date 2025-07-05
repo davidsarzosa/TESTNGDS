@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2025-07-05T01:20:31 CDT" name="groups demo" finished-at="2025-07-05T01:20:40 CDT" duration-ms="8425">
+=======
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-04T21:49:56 CDT" name="Default suite" finished-at="2025-07-04T21:50:05 CDT" duration-ms="9333">
+>>>>>>> d589ee1856aabec6a4e95bd09dd5b59a5381ed1c
     <groups>
       <group name="regression">
         <method signature="GroupsDemo.test2()[pri:0, instance:com.neotech.lesson03.GroupsDemo@ed7f8b4]" name="test2" class="com.neotech.lesson03.GroupsDemo"/>
@@ -17,6 +24,7 @@
         <method signature="GroupsDemo.test2()[pri:0, instance:com.neotech.lesson03.GroupsDemo@ed7f8b4]" name="test2" class="com.neotech.lesson03.GroupsDemo"/>
       </group> <!-- smoke -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2025-07-05T01:20:31 CDT" name="groups demo test" finished-at="2025-07-05T01:20:40 CDT" duration-ms="8425">
       <class name="com.neotech.lesson03.GroupsDemo">
         <test-method signature="test1()[pri:0, instance:com.neotech.lesson03.GroupsDemo@ed7f8b4]" started-at="2025-07-05T01:20:40 CDT" name="test1" finished-at="2025-07-05T01:20:40 CDT" duration-ms="2" status="PASS">
@@ -56,4 +64,23 @@
       </class> <!-- com.neotech.lesson01.TitleAndLogoValidation -->
     </test> <!-- groups demo test -->
   </suite> <!-- groups demo -->
+=======
+    <test started-at="2025-07-04T21:49:56 CDT" name="Default test" finished-at="2025-07-04T21:50:05 CDT" duration-ms="9333">
+      <class name="com.neotech.lesson02.SoftAssertDemo">
+        <test-method is-config="true" signature="openAndNavigate()[pri:0, instance:com.neotech.lesson02.SoftAssertDemo@61322f9d]" started-at="2025-07-04T21:49:56 CDT" name="openAndNavigate" finished-at="2025-07-04T21:49:59 CDT" duration-ms="3135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAndNavigate -->
+        <test-method signature="logoAndLoginValidation()[pri:0, instance:com.neotech.lesson02.SoftAssertDemo@61322f9d]" started-at="2025-07-04T21:49:59 CDT" name="logoAndLoginValidation" finished-at="2025-07-04T21:50:05 CDT" duration-ms="6063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoAndLoginValidation -->
+        <test-method is-config="true" signature="quiBrowser()[pri:0, instance:com.neotech.lesson02.SoftAssertDemo@61322f9d]" started-at="2025-07-04T21:50:05 CDT" name="quiBrowser" finished-at="2025-07-04T21:50:05 CDT" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quiBrowser -->
+      </class> <!-- com.neotech.lesson02.SoftAssertDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> d589ee1856aabec6a4e95bd09dd5b59a5381ed1c
 </testng-results>
