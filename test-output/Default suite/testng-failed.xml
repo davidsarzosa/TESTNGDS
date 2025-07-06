@@ -3,23 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.neotech.lesson03.DataProviderDemo">
+      <class name="com.neotech.review01.UsingListener">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="loginFunctionality"/>
+          <include name="afterMethod"/>
+          <include name="test1"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.neotech.lesson03.DataProviderDemo -->
-=======
-      <class name="com.neotech.lesson02.SoftAssertDemo">
-        <methods>
-          <include name="logoAndLoginValidation"/>
-          <include name="quiBrowser"/>
-          <include name="openAndNavigate"/>
-        </methods>
-      </class> <!-- com.neotech.lesson02.SoftAssertDemo -->
->>>>>>> d589ee1856aabec6a4e95bd09dd5b59a5381ed1c
+      </class> <!-- com.neotech.review01.UsingListener -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
